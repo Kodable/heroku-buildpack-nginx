@@ -21,6 +21,10 @@ mkdir -p logs/nginx
 touch logs/nginx/access.log logs/nginx/error.log
 echo 'buildpack=nginx at=logs-initialized'
 
+# Initialize cache.
+mkdir -p caching/nginx
+echo 'buildpack=nginx at=caching-initialized'
+
 # Start log redirection.
 (
   # Redirect nginx logs to stdout.
